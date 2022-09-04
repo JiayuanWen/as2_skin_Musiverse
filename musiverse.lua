@@ -350,20 +350,20 @@ do -- Gameplay graphics
             usesublayerclone = false,
             puzzlematchmaterial = {
                 shader = "Unlit/Transparent",
-                texture = "tileMatchingBarsinvert_Low.png",
+                texture = "/textures/gameplay/tileMatchingBarsinvert_Low.png",
                 shadercolors = "highway",
                 aniso = 1,
                 layer = 14
             },
             puzzleflyupmaterial = {
                 shader = "VertexColorUnlitTintedAddFlyup",
-                texture = "flyup_Low.png",
+                texture = "/textures/gameplay/flyup_Low.png",
                 shadercolors = "highway",
                 layer = 14
             },
             puzzlematerial = {
                 shader = "VertexColorUnlitTintedAddDouble",
-                texture = "tilesSquareinvert_Low.png",
+                texture = "/textures/gameplay/tilesSquareinvert_Low.png",
                 texturewrap = "clamp",
                 aniso = 1,
                 usemipmaps = "false",
@@ -376,20 +376,20 @@ do -- Gameplay graphics
             usesublayerclone = false,
             puzzlematchmaterial = {
                 shader = "Unlit/Transparent",
-                texture = "tileMatchingBarsinvert_Med.png",
+                texture = "/textures/gameplay/tileMatchingBarsinvert_Med.png",
                 shadercolors = "highway",
                 aniso = 3,
                 layer = 14
             },
             puzzleflyupmaterial = {
                 shader = "VertexColorUnlitTintedAddFlyup",
-                texture = "flyup_Med.png",
+                texture = "/textures/gameplay/flyup_Med.png",
                 shadercolors = "highway",
                 layer = 14
             },
             puzzlematerial = {
                 shader = "VertexColorUnlitTintedAddDouble",
-                texture = "tilesSquareinvert_Med.png",
+                texture = "/textures/gameplay/tilesSquareinvert_Med.png",
                 texturewrap = "clamp",
                 aniso = 3,
                 usemipmaps = "false",
@@ -402,20 +402,20 @@ do -- Gameplay graphics
             usesublayerclone = false,
             puzzlematchmaterial = {
                 shader = "Unlit/Transparent",
-                texture = "tileMatchingBarsinvert_High.png",
+                texture = "/textures/gameplay/tileMatchingBarsinvert_High.png",
                 shadercolors = "highway",
                 aniso = 6,
                 layer = 14
             },
             puzzleflyupmaterial = {
                 shader = "VertexColorUnlitTintedAddFlyup",
-                texture = "flyup_High.png",
+                texture = "/textures/gameplay/flyup_High.png",
                 shadercolors = "highway",
                 layer = 14
             },
             puzzlematerial = {
                 shader = "VertexColorUnlitTintedAddDouble",
-                texture = "tilesSquareinvert_High.png",
+                texture = "/textures/gameplay/tilesSquareinvert_High.png",
                 texturewrap = "clamp",
                 aniso = 6,
                 usemipmaps = "false",
@@ -428,20 +428,20 @@ do -- Gameplay graphics
             usesublayerclone = false,
             puzzlematchmaterial = {
                 shader = "Unlit/Transparent",
-                texture = "tileMatchingBarsinvert_Ultra.png",
+                texture = "/textures/gameplay/tileMatchingBarsinvert_Ultra.png",
                 shadercolors = "highway",
                 aniso = 9,
                 layer = 14
             },
             puzzleflyupmaterial = {
                 shader = "VertexColorUnlitTintedAddFlyup",
-                texture = "flyup_Ultra.png",
+                texture = "/textures/gameplay/flyup_Ultra.png",
                 shadercolors = "highway",
                 layer = 14
             },
             puzzlematerial = {
                 shader = "VertexColorUnlitTintedAddDouble",
-                texture = "tilesSquareinvert_Ultra.png",
+                texture = "/textures/gameplay/tilesSquareinvert_Ultra.png",
                 texturewrap = "clamp",
                 aniso = 9,
                 usemipmaps = "false",
