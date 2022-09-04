@@ -494,7 +494,7 @@ do --Player model
 				_Color = {r=255,g=255,b=255},
 				_GlowColor = {r=15,g=15,b=15}
 			},
-			textures={_MatCap="shipmaterial.jpg", _Glow="shipcolor.jpg"}
+			textures={_MatCap="/textures/player/shipmaterial.jpg", _Glow="/textures/player/shipcolor.jpg"}
 	}
 
     if not ispuzzle then
