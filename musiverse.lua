@@ -206,7 +206,7 @@ do -- Blocks
                 shadersettings = {
                     _Color = {0,0.6,0.2980392}
                 },
-                texture = "Color block.jpg",
+                texture = "/textures/blocks/Color block.jpg",
                 height = 0,
                 float_on_water = false,
                 scale = {1, 1, 1},
@@ -218,7 +218,7 @@ do -- Blocks
                 shadercolors = {
                     _Color = {1,1,1}
                 },
-                texture = "Grey.jpg",
+                texture = "/textures/blocks/Grey.jpg",
                 height = 0,
                 float_on_water = false,
                 scale = {1, 1, 1},
@@ -230,7 +230,7 @@ do -- Blocks
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {colorMode = "highwayinverted"},
-                        texture = "White.png",
+                        texture = "/textures/blocks/White.png",
                         height = 0,
                         float_on_water = false,
                         scale = {1, 1, 1}
