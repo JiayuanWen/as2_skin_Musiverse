@@ -693,21 +693,21 @@ end --End of player model behavior section
 
 do --Skybox
     SetSkybox {
-        skysphere = "skyboxLow.png"
+        skysphere = "/textures/scene/skyboxLow.png"
     }
 	
     if quality < 2 then
-        skyTexture = "skyboxLow.png"
-		nebularTexture = "skybox_glow_Low.png"
+        skyTexture = "/textures/scene/skyboxLow.png"
+		nebularTexture = "/textures/scene/skybox_glow_Low.png"
     elseif quality < 3 then
-        skyTexture = "skyboxMed.png"
-		nebularTexture = "skybox_glow_Med.png"
+        skyTexture = "/textures/scene/skyboxMed.png"
+		nebularTexture = "/textures/scene/skybox_glow_Med.png"
     elseif quality < 4 then
-        skyTexture = "skyboxHigh.png"
-		nebularTexture = "skybox_glow_High.png"
+        skyTexture = "/textures/scene/skyboxHigh.png"
+		nebularTexture = "/textures/scene/skybox_glow_High.png"
     else
-        skyTexture = "skyboxUltra.png"
-		nebularTexture = "skybox_glow_Ultra.png"
+        skyTexture = "/textures/scene/skyboxUltra.png"
+		nebularTexture = "/textures/scene/skybox_glow_Ultra.png"
     end
 
     if quality < 2 then
@@ -775,13 +775,13 @@ end --End of track color section
 
 do --Rings
     if quality < 2 then
-        ringTexture = "ringLow.png"
+        ringTexture = "/textures/ring/ringLow.png"
     elseif quality < 3 then
-        ringTexture = "ringMed.png"
+        ringTexture = "/textures/ring/ringMed.png"
     elseif quality < 4 then
-        ringTexture = "ringHigh.png"
+        ringTexture = "/textures/ring/ringHigh.png"
     else
-        ringTexture = "ringUltra.png"
+        ringTexture = "/textures/ring/ringUltra.png"
     end
 
     if competitiveCamera then
