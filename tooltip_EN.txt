@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 Based on the mobile game of the same name.
-=======
-Classic white background look from Audiosurf 1
->>>>>>> 6da9b6476ee007327dfb444056da747bdba98fd5
+
