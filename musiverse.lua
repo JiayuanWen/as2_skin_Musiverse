@@ -123,17 +123,17 @@ do --Skin general settings setup
     quality = GetQualityLevel4()
 
     if quality < 3 then
-        debrisTexture = "FireworkMed.png"
+        debrisTexture = "/textures/scene/FireworkUltra.png"
         airdebrisCount = 400
         airdebrisDensity = 50
         blurBool = 0
     elseif quality < 4 then
-        debrisTexture = "FireworkHigh.png"
+        debrisTexture = "/textures/scene/FireworkUltra.png"
         airdebrisCount = 450
         airdebrisDensity = 50
         blurBool = 0
     else
-        debrisTexture = "FireworkUltra.png"
+        debrisTexture = "/textures/scene/FireworkUltra.png"
         airdebrisCount = 500
         airdebrisDensity = 50
         blurBool = 1.3
