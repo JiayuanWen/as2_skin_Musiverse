@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Audiosurf 2 Skin - Classic (White)
 A custom skin for the rhythm game [Audiosurf 2](https://store.steampowered.com/app/235800/Audiosurf_2/). This skin aim to recreate the white background look from [Audiosurf 1](https://store.steampowered.com/app/12900/AudioSurf/).
 <br>
@@ -42,3 +43,7 @@ https://youtu.be/4fxc80fZ9Sc
 This skin has two camera modes: Normal camera, Competitive camera
 
 To switch between the two camera modes, go to `(Your Audiosurf 2 directory)\skins\76561198099088813\classic (white)` or `(Your Audiosurf 2 directory)\skins\classic (white)` if you didn't install the skin through workshop, open `classic (white).lua`, then set competitiveCamera under Options to either true or false.
+=======
+# as2_skin_musiverse
+A custom skin for the rhythm game Audiosurf 2. This skin aim to mimic the appearance of the mobile game Musiverse.
+>>>>>>> 0a500ef6346817360a22a82d9386d8bb8358aef9
