@@ -169,11 +169,19 @@ do --Skin general settings setup
     }
 end --End of skin setting section
 
+--[[
 do --Post-processing effect(s)
+    postEffect = BuildMaterial {
+        shader = "Hidden/AmplifyBloom"
+    }
     if quality >= 4 then
-		
+        AddPostEffect {
+            depth = "foreground",
+            material = postEffect
+        }
     end
 end --End of Post-processing effect section
+--]]
 
 do --Sound effects
     if not ispuzzle then
@@ -498,6 +506,14 @@ do --Player model
 	}
 
     if not ispuzzle then
+        thrusterMaterial = BuildMaterial{
+			renderqueue = 3999,
+			shader="TransparentShadowCaster",
+			shadercolors={
+				_Color = fif(forceStaticColorOntoMonoBlocks, overrideHighwayColor, {255,255,255})
+			}
+		}
+
         ship = {
             min_hover_height = 0.15,
             max_hover_height = 0.9,
@@ -507,10 +523,10 @@ do --Player model
             smooth_tilting_max_offset = -20,
             pos = {x = 0, y = 0, z = 0.20},
             mesh = shipMesh,
-            shadowreceiver = true,
-            layer = 13,
-            reflect = true,
+            shadowreceiver = false,
+            reflect = false,
             material = shipMaterial,
+            layer = 13,
             scale = {x = 1, y = 1, z = 1},
             thrusters = {
                 crossSectionShape = {
@@ -522,18 +538,21 @@ do --Player model
                     {.5, 0, 0},
                     {.35, -.35, 0}
                 },
-                perShapeNodeColorScalers = {1, 1, 1, 1, 1, 1, 1},
-                shader = "VertexColorUnlitTinted",
+                perShapeNodeColorScalers = {0.5, 1, 1, 1, 1, 1, 0.5},
+                colorscaler = {close=2.5, far=0},
+                material = thrusterMaterial,
                 layer = 13,
-                renderqueue = 3999,
                 colorscaler = 1.5,
                 extrusions = 20,
                 stretch = -0.108,
                 updateseconds = 0.025,
                 instances = {
-                    {pos = {0, .49, -1.1}, rot = {0, 0, 0}, scale = {.20, .21, .52}},
-                    {pos = {.22, 0.245, -1.1}, rot = {0, 0, 58.713}, scale = {.20, .21, .52}},
-                    {pos = {-.22, 0.245, -1.1}, rot = {0, 0, 313.7366}, scale = {.20, .21, .52}}
+                    {
+                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.20, .20, .41},
+                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.17, .17, .41},
+                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.14, .14, .41},
+                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.11, .11, .41}
+                    }
                 }
             }
         }
@@ -571,9 +590,8 @@ do --Player model
                     {.35, -.35, 0}
                 },
                 perShapeNodeColorScalers = {1, 1, 1, 1, 1, 1, 1},
-                shader = "VertexColorUnlitTinted",
+                material = thrusterMaterial,
                 layer = 13,
-                renderqueue = 3999,
                 colorscaler = 1.5,
                 extrusions = 20,
                 stretch = -0.108,
@@ -1229,7 +1247,7 @@ do --Background buildings
         end --endif quality >= 3
     end --endif showBackgroundBuilding
 end --End of building section
-]]
+--]]
 
 do --Rails
     -- rails are the bulk of the graphics in audiosurf. Each one is a 2D shape extruded down the length of the track.
