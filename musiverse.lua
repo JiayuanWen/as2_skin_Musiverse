@@ -889,7 +889,7 @@ do --Background buildings
                         _Color = "highway"
                     },
                     transform = {scale = {scaletype = "intensity", min = {20, 90, 20}, max = {90, 90, 90}}},
-                    texture = "cliff side.png",
+                    texture = "/textures/rail/cliff side.png",
                     layer = 19
                 }
             }
@@ -910,7 +910,7 @@ do --Background buildings
                         _Color = "highway"
                     },
                     transform = {scale = {45, 90, 45}},
-                    texture = "cliff side.png",
+                    texture = "/textures/rail/cliff side.png",
                     layer = 19
                 }
             }
@@ -1255,7 +1255,7 @@ do --Rails
 				scale = {x=0.34, y=0.34, z=0.34 },
 				rot = {x=90,y=0,z=0}
 			},
-			texture = "sideSphere_shade.png",
+			texture = "/textures/rail/sideSphere_shade.png",
 			shader = "IlluminDiffuse",
 			shadercolors = {
                     _Color = "highway"
@@ -1275,7 +1275,7 @@ do --Rails
 				scale = {x=0.34, y=0.34, z=0.34 },
 				rot = {x=90,y=0,z=0}
 			},
-			texture = "sideSphere_shade.png",
+			texture = "/textures/rail/sideSphere_shade.png",
 			shader = "IlluminDiffuse",
 			shadercolors = {
                     _Color = "highway"
@@ -1514,7 +1514,7 @@ do --Rails
             flatten = false,
             behind_renderdist = 10,
             wrapnodeshape = false,
-            texture = "cliff side.png",
+            texture = "/textures/rail/cliff side.png",
             fullfuture = showEntireRoad,
             calculatenormals = false,
             allowfullmaterialoptions = false,
@@ -1769,7 +1769,7 @@ do --Rails
             flatten = false,
             behind_renderdist = 10,
             wrapnodeshape = false,
-            texture = "cliff side.png",
+            texture = "/textures/rail/cliff side.png",
             fullfuture = showEntireRoad,
             calculatenormals = false,
             allowfullmaterialoptions = false,
