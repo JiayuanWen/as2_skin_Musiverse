@@ -178,10 +178,10 @@ end --End of Post-processing effect section
 do --Sound effects
     if not ispuzzle then
         LoadSounds {
-            hit = "color.wav",
-            hitgrey = "grey.wav",
-            hitgreypro = "grey.wav",
-            matchsmall = "matchmedium.wav"
+            hit = "/sounds/color.wav",
+            hitgrey = "/sounds/grey.wav",
+            hitgreypro = "/sounds/grey.wav",
+            matchsmall = "/sounds/matchmedium.wav"
         }
     end
 end --End of sound section
