@@ -1269,7 +1269,7 @@ do --Rails
 		railoffset = 0,
 		colorMode = "static",
 		gameobject = {
-			mesh = "side sphere.obj",
+			mesh = "/models/rail/side sphere.obj",
 			transform = {
 				pos = {x= trackWidth+.2, y=1, z=4.6 },
 				scale = {x=0.34, y=0.34, z=0.34 },
@@ -1372,7 +1372,7 @@ do --Rails
 
     if not wakeboard then
         CreateRail {
-            --Road surface
+            --Road surface far
             positionOffset = {
                 x = 0,
                 y = 0
@@ -1385,17 +1385,40 @@ do --Rails
                 1,
                 1
             },
-			shader = "ProximityEmissionVertexColor",
+			shader = "proximity_2way_Color",
             colorMode = "static",
-			color = {r=57,g=2,b=74},
+			color = {r=255,g=255,b=255},
             layer = 12,
 			shadercolors={
-				_Color={r=255,g=255,b=255}
+				_nearColor={r=57,g=2,b=74,a=0},
+				_farColor={r=57,g=2,b=74,a=255}
 			},
             shadersettings={
-				_StartDistance=-10, 
-				_FullDistance=40
+				_nearDistance=1.5, 
+				_farDistance=20
 			},
+            renderqueue = 2001,
+			fullfuture = showEntireRoad,
+            flatten = false
+        }
+        CreateRail {
+            --Road surface 
+            positionOffset = {
+                x = 0,
+                y = -0.01
+            },
+            crossSectionShape = {
+                {x = -trackWidth, y = 0},
+                {x = trackWidth, y = 0},
+            },
+            perShapeNodeColorScalers = {
+                1,
+                1
+            },
+			shader = "VertexColorUnlitTinted",
+            colorMode = "static",
+			color = {r=68,g=2,b=88},
+            layer = 12,
             renderqueue = 2001,
 			fullfuture = showEntireRoad,
             flatten = false
