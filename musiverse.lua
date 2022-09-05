@@ -201,7 +201,7 @@ do -- Blocks
         SetBlocks {
             maxvisiblecount = blockCount,
             colorblocks = {
-                mesh = "colorblock.obj",
+                mesh = "/models/blocks/colorblock.obj",
                 shader = "IlluminDiffuse",
                 shadersettings = {
                     _Color = {0,0.6,0.2980392}
@@ -213,7 +213,7 @@ do -- Blocks
                 layer = 14
             },
             greyblocks = {
-                mesh = "colorblock.obj",
+                mesh = "/models/blocks/colorblock.obj",
                 shader = "IlluminDiffuse",
                 shadercolors = {
                     _Color = {1,1,1}
@@ -226,7 +226,7 @@ do -- Blocks
             },
             powerups = {
                 powerpellet = {
-                    mesh = "big.obj",
+                    mesh = "/models/blocks/big.obj",
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {colorMode = "highwayinverted"},
@@ -237,7 +237,7 @@ do -- Blocks
                     }
                 },
                 whiteblock = {
-                    mesh = "colorblock.obj",
+                    mesh = "/models/blocks/colorblock.obj",
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
@@ -248,7 +248,7 @@ do -- Blocks
                     }
                 },
                 ghost = {
-                    mesh = "colorblock.obj",
+                    mesh = "/models/blocks/colorblock.obj",
                     shader = fif(ispuzzle, "Diffuse", "RimLight"),
                     texture = "Color block.jpg",
                     height = 0,
@@ -256,7 +256,7 @@ do -- Blocks
                     scale = {1, 1, 1}
                 },
                 x2 = {
-                    mesh = "x.obj",
+                    mesh = "/models/blocks/x.obj",
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
@@ -267,7 +267,7 @@ do -- Blocks
                     }
                 },
                 x3 = {
-                    mesh = "x.obj",
+                    mesh = "/models/blocks/x.obj",
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
@@ -278,7 +278,7 @@ do -- Blocks
                     }
                 },
                 x4 = {
-                    mesh = "x.obj",
+                    mesh = "/models/blocks/x.obj",
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
@@ -289,7 +289,7 @@ do -- Blocks
                     }
                 },
                 x5 = {
-                    mesh = "x.obj",
+                    mesh = "/models/blocks/x.obj",
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
@@ -309,7 +309,7 @@ do -- Gameplay graphics
         SetBlocks {
             maxvisiblecount = 35,
             colorblocks = {
-                mesh = "colorblock.obj",
+                mesh = "/models/blocks/colorblock.obj",
                 shader = "IlluminDiffuse",
                 texture = "Color block.jpg",
                 height = 0,
@@ -480,7 +480,7 @@ do --Player model
     monoColor = "MonoColor.png"
 
     shipMesh = BuildMesh {
-        mesh = "ship.obj",
+        mesh = "/models/player/ship.obj",
         barycentricTangents = true,
         calculateTangents = true,
 		calculateNormals = false,
@@ -548,7 +548,7 @@ do --Player model
             smooth_tilting_speed = 10,
             smooth_tilting_max_offset = -20,
             pos = {x = 0, y = 0, z = 0},
-            mesh = "vehicle1a.obj",
+            mesh = "/models/player/vehicle1a.obj",
             shader = "UnlitTintedTexGlow",
             layer = 13,
             reflect = true,
@@ -720,7 +720,7 @@ do --Skybox
 		name = "skysphere",
 		tracknode = 5000,
 		gameobject = {
-			mesh = "skysphere.obj",
+			mesh = "/models/sky/skysphere.obj",
 			transform = {
 				scale = {x=60000,y=60000,z=60000},
 				rot = {x=0,y=0,z=0}
@@ -740,7 +740,7 @@ do --Skybox
 		name = "skysphereglow",
 		tracknode = 5000,
 		gameobject = {
-			mesh = "skysphere.obj",
+			mesh = "/models/sky/skysphere.obj",
 			transform = {
 				scale = {x=47000,y=47000,z=47000},
 				rot = {x=0,y=0,z=0}
@@ -857,7 +857,7 @@ do --End of track object (Also known as endcookie)
 	colorMode = "highway",
 		gameobject={
 			transform={pos={0,0,126},scale={scaletype="intensity",min={55,99,900},max={66,120,900}}},
-			mesh="danishCookie_boxes.obj",
+			mesh="/models/end/danishCookie_boxes.obj",
 			shader="RimLightHatched",
 			shadercolors={
 				_Color={0,0,0},
@@ -1249,7 +1249,7 @@ do --Rails
 		railoffset = 0,
 		colorMode = "static",
 		gameobject = {
-			mesh = "side sphere.obj",
+			mesh = "/models/rail/side sphere.obj",
 			transform = {
 				pos = {x= -trackWidth-.2, y=1, z=4.6 },
 				scale = {x=0.34, y=0.34, z=0.34 },
