@@ -505,7 +505,7 @@ do --Player model
 			textures={_MatCap="/textures/player/shipmaterial.jpg", _Glow="/textures/player/shipcolor.jpg"}
 	}
 
-    if not ispuzzle then
+    if not wakeboard then
         thrusterMaterial = BuildMaterial{
 			renderqueue = 3999,
 			shader="TransparentShadowCaster",
@@ -516,7 +516,7 @@ do --Player model
 
         ship = {
             min_hover_height = 0.15,
-            max_hover_height = 0.9,
+            max_hover_height = 0.6,
             use_water_rooster = false,
             smooth_tilting = false,
             smooth_tilting_speed = 10,
@@ -548,57 +548,11 @@ do --Player model
                 updateseconds = 0.025,
                 instances = {
                     {
-                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.20, .20, .41},
-                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.17, .17, .41},
-                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.14, .14, .41},
-                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.11, .11, .41}
+                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.85, .85, .41},
+                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.65, .65, .41},
+                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.44, .44, .41},
+                        pos = {0, .29, -1.3}, rot = {0, 0, 0}, scale = {.21, .21, .41}
                     }
-                }
-            }
-        }
-    end
-
-    if ispuzzle then
-        ship = {
-            min_hover_height = 0.23,
-            max_hover_height = 0.8,
-            use_water_rooster = false,
-            smooth_tilting = true,
-            smooth_tilting_speed = 10,
-            smooth_tilting_max_offset = -20,
-            pos = {x = 0, y = 0, z = 0},
-            mesh = "/models/player/vehicle1a.obj",
-            shader = "UnlitTintedTexGlow",
-            layer = 13,
-            reflect = true,
-            renderqueue = 2000,
-            shadersettings = {_GlowScaler = 9, _Brightness = 0},
-            shadercolors = {
-                _Color = {128.3, 128.3, 128.3},
-                _GlowColor = {colorsource = "highway", scaletype = "intensity", minscaler = 0.155, maxscaler = 0.155}
-            },
-            textures = {_Glow = "vehicle1a_ao_glow.png", _MainTex = "vehicle1a_ao.png"},
-            scale = {x = 1, y = 1, z = 1},
-            thrusters = {
-                crossSectionShape = {
-                    {-.35, -.35, 0},
-                    {-.5, 0, 0},
-                    {-.35, .35, 0},
-                    {0, .5, 0},
-                    {.35, .35, 0},
-                    {.5, 0, 0},
-                    {.35, -.35, 0}
-                },
-                perShapeNodeColorScalers = {1, 1, 1, 1, 1, 1, 1},
-                material = thrusterMaterial,
-                layer = 13,
-                colorscaler = 1.5,
-                extrusions = 20,
-                stretch = -0.108,
-                updateseconds = 0.025,
-                instances = {
-                    {pos = {.549, 0.15, -0.63}, rot = {0, 0, 58.713}, scale = {.20, .21, .573}},
-                    {pos = {-.549, 0.15, -0.63}, rot = {0, 0, 313.7366}, scale = {.20, .21, .573}}
                 }
             }
         }
@@ -693,13 +647,13 @@ do --Player model
                     rot = {20, 0, 0}
                 },
                 camthird = {
-                    pos={0,3,-0.5},
-					rot={30,0,0},
+                    pos={0,2.4,-0.8},
+					rot={26,0,0},
                     strafefactor = 0.62,
                     strafefactorFar = 0.62, 
-                    pos2 = {0, 2.7, -1.55},
+                    pos2 = {0, 2.4, -1.35},
                     rot2 = {25, 0, 0}, 
-                    puzzleoffset = -0.67,
+                    puzzleoffset = -0.8,
                     puzzleoffset2 = -1,
                     transitionspeed = 0.4
                 },
