@@ -309,6 +309,15 @@ do -- Blocks
                 }
             }
         }
+
+        -- Custom block color set for puzzle modes
+        SetBlockColors{
+	        {r=126, g=0, b=255},
+	        {r=0, g=66, b=240},
+	        {r=0, g=184, b=0},
+	        {r=255, g=189, b=15},
+	        {r=227, g=38, b=0}
+        }
     end
 end --End of mono mode block behavior
 
@@ -483,7 +492,7 @@ do -- Gameplay graphics
     }
 end --End of gameplay graphic section
 
-do --Player model
+do --Player model & camera
     monoTexture = "Mono.png"
     monoColor = "MonoColor.png"
 
