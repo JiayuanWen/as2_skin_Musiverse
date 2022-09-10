@@ -249,7 +249,7 @@ do -- Blocks
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
-                        texture = "black.png",
+                        texture = "White.png",
                         height = 0,
                         float_on_water = false,
                         scale = {1, 1, 1}
@@ -310,6 +310,21 @@ do -- Blocks
             }
         }
 
+        -- Block property for puzzle modes
+        if ispuzzle then
+            SetBlocks {
+                maxvisiblecount = blockCount,
+                colorblocks = {
+                    mesh = "/models/blocks/colorblock.obj",
+                    shader = "IlluminDiffuse",
+                    texture = "Grey.jpg",
+                    height = 0,
+                    float_on_water = false,
+                    scale = {1, 1, 1}
+                }
+            }
+        end
+
         -- Custom block color set for puzzle modes
         SetBlockColors{
 	        {r=126, g=0, b=255},
@@ -322,20 +337,6 @@ do -- Blocks
 end --End of mono mode block behavior
 
 do -- Gameplay graphics
-    if ispuzzle then
-        SetBlocks {
-            maxvisiblecount = 35,
-            colorblocks = {
-                mesh = "/models/blocks/colorblock.obj",
-                shader = "IlluminDiffuse",
-                texture = "Color block.jpg",
-                height = 0,
-                float_on_water = false,
-                scale = {1, 1, 1}
-            }
-        }
-    end
-
     if quality < 2 then
         hitTexture = "hit2Low.png"
     elseif quality < 3 then
@@ -362,110 +363,218 @@ do -- Gameplay graphics
         }
     end
 
-    if quality < 2 then
-        SetPuzzleGraphics {
-            usesublayerclone = false,
-            puzzlematchmaterial = {
-                shader = "Unlit/Transparent",
-                texture = "/textures/gameplay/tileMatchingBarsinvert_Low.png",
-                shadercolors = "highway",
-                aniso = 1,
-                layer = 14
-            },
-            puzzleflyupmaterial = {
-                shader = "VertexColorUnlitTintedAddFlyup",
-                texture = "/textures/gameplay/flyup_Low.png",
-                shadercolors = "highway",
-                layer = 14
-            },
-            puzzlematerial = {
-                shader = "VertexColorUnlitTintedAddDouble",
-                texture = "/textures/gameplay/tilesSquareinvert_Low.png",
-                texturewrap = "clamp",
-                aniso = 1,
-                usemipmaps = "false",
-                shadercolors = {0, 0, 0},
-                layer = 14
+    if not ispuzzle then
+        if quality < 2 then
+            SetPuzzleGraphics {
+                usesublayerclone = false,
+                puzzlematchmaterial = {
+                    shader = "Unlit/Transparent",
+                    texture = "/textures/gameplay/tileMatchingBarsinvert_Low.png",
+                    shadercolors = "highway",
+                    aniso = 1,
+                    layer = 14
+                },
+                puzzleflyupmaterial = {
+                    shader = "VertexColorUnlitTintedAddFlyup",
+                    texture = "/textures/gameplay/flyup_Low.png",
+                    shadercolors = "highway",
+                    layer = 14
+                },
+                puzzlematerial = {
+                    shader = "VertexColorUnlitTintedAddDouble",
+                    texture = "/textures/gameplay/tilesSquareinvert_Low.png",
+                    texturewrap = "clamp",
+                    aniso = 1,
+                    usemipmaps = "false",
+                    shadercolors = {0, 0, 0},
+                    layer = 14
+                }
             }
-        }
-    elseif quality < 3 then
-        SetPuzzleGraphics {
-            usesublayerclone = false,
-            puzzlematchmaterial = {
-                shader = "Unlit/Transparent",
-                texture = "/textures/gameplay/tileMatchingBarsinvert_Med.png",
-                shadercolors = "highway",
-                aniso = 3,
-                layer = 14
-            },
-            puzzleflyupmaterial = {
-                shader = "VertexColorUnlitTintedAddFlyup",
-                texture = "/textures/gameplay/flyup_Med.png",
-                shadercolors = "highway",
-                layer = 14
-            },
-            puzzlematerial = {
-                shader = "VertexColorUnlitTintedAddDouble",
-                texture = "/textures/gameplay/tilesSquareinvert_Med.png",
-                texturewrap = "clamp",
-                aniso = 3,
-                usemipmaps = "false",
-                shadercolors = {0, 0, 0},
-                layer = 14
+        elseif quality < 3 then
+            SetPuzzleGraphics {
+                usesublayerclone = false,
+                puzzlematchmaterial = {
+                    shader = "Unlit/Transparent",
+                    texture = "/textures/gameplay/tileMatchingBarsinvert_Med.png",
+                    shadercolors = "highway",
+                    aniso = 3,
+                    layer = 14
+                },
+                puzzleflyupmaterial = {
+                    shader = "VertexColorUnlitTintedAddFlyup",
+                    texture = "/textures/gameplay/flyup_Med.png",
+                    shadercolors = "highway",
+                    layer = 14
+                },
+                puzzlematerial = {
+                    shader = "VertexColorUnlitTintedAddDouble",
+                    texture = "/textures/gameplay/tilesSquareinvert_Med.png",
+                    texturewrap = "clamp",
+                    aniso = 3,
+                    usemipmaps = "false",
+                    shadercolors = {0, 0, 0},
+                    layer = 14
+                }
             }
-        }
-    elseif quality < 4 then
-        SetPuzzleGraphics {
-            usesublayerclone = false,
-            puzzlematchmaterial = {
-                shader = "Unlit/Transparent",
-                texture = "/textures/gameplay/tileMatchingBarsinvert_High.png",
-                shadercolors = "highway",
-                aniso = 6,
-                layer = 14
-            },
-            puzzleflyupmaterial = {
-                shader = "VertexColorUnlitTintedAddFlyup",
-                texture = "/textures/gameplay/flyup_High.png",
-                shadercolors = "highway",
-                layer = 14
-            },
-            puzzlematerial = {
-                shader = "VertexColorUnlitTintedAddDouble",
-                texture = "/textures/gameplay/tilesSquareinvert_High.png",
-                texturewrap = "clamp",
-                aniso = 6,
-                usemipmaps = "false",
-                shadercolors = {0, 0, 0},
-                layer = 14
+        elseif quality < 4 then
+            SetPuzzleGraphics {
+                usesublayerclone = false,
+                puzzlematchmaterial = {
+                    shader = "Unlit/Transparent",
+                    texture = "/textures/gameplay/tileMatchingBarsinvert_High.png",
+                    shadercolors = "highway",
+                    aniso = 6,
+                    layer = 14
+                },
+                puzzleflyupmaterial = {
+                    shader = "VertexColorUnlitTintedAddFlyup",
+                    texture = "/textures/gameplay/flyup_High.png",
+                    shadercolors = "highway",
+                    layer = 14
+                },
+                puzzlematerial = {
+                    shader = "VertexColorUnlitTintedAddDouble",
+                    texture = "/textures/gameplay/tilesSquareinvert_High.png",
+                    texturewrap = "clamp",
+                    aniso = 6,
+                    usemipmaps = "false",
+                    shadercolors = {0, 0, 0},
+                    layer = 14
+                }
             }
-        }
-    else
-        SetPuzzleGraphics {
-            usesublayerclone = false,
-            puzzlematchmaterial = {
-                shader = "Unlit/Transparent",
-                texture = "/textures/gameplay/tileMatchingBarsinvert_Ultra.png",
-                shadercolors = "highway",
-                aniso = 9,
-                layer = 14
-            },
-            puzzleflyupmaterial = {
-                shader = "VertexColorUnlitTintedAddFlyup",
-                texture = "/textures/gameplay/flyup_Ultra.png",
-                shadercolors = "highway",
-                layer = 14
-            },
-            puzzlematerial = {
-                shader = "VertexColorUnlitTintedAddDouble",
-                texture = "/textures/gameplay/tilesSquareinvert_Ultra.png",
-                texturewrap = "clamp",
-                aniso = 9,
-                usemipmaps = "false",
-                shadercolors = {0, 0, 0},
-                layer = 14
+        else
+            SetPuzzleGraphics {
+                usesublayerclone = false,
+                puzzlematchmaterial = {
+                    shader = "Unlit/Transparent",
+                    texture = "/textures/gameplay/tileMatchingBarsinvert_Ultra.png",
+                    shadercolors = "highway",
+                    aniso = 9,
+                    layer = 14
+                },
+                puzzleflyupmaterial = {
+                    shader = "VertexColorUnlitTintedAddFlyup",
+                    texture = "/textures/gameplay/flyup_Ultra.png",
+                    shadercolors = "highway",
+                    layer = 14
+                },
+                puzzlematerial = {
+                    shader = "VertexColorUnlitTintedAddDouble",
+                    texture = "/textures/gameplay/tilesSquareinvert_Ultra.png",
+                    texturewrap = "clamp",
+                    aniso = 9,
+                    usemipmaps = "false",
+                    shadercolors = {0, 0, 0},
+                    layer = 14
+                }
             }
-        }
+        end
+    else 
+        if quality < 2 then
+            SetPuzzleGraphics {
+                usesublayerclone = false,
+                puzzlematchmaterial = {
+                    shader = "Unlit/Transparent",
+                    texture = "/textures/gameplay/tileMatchingBarsinvert_Low.png",
+                    shadercolors = "highway",
+                    aniso = 1,
+                    layer = 14
+                },
+                puzzleflyupmaterial = {
+                    shader = "VertexColorUnlitTintedAddFlyup",
+                    texture = "/textures/gameplay/flyup_Low.png",
+                    shadercolors = "highway",
+                    layer = 14
+                },
+                puzzlematerial = {
+                    shader = "VertexColorUnlitTintedAddDouble",
+                    texture = "/textures/gameplay/tilesSquareinvert_Puzzle_Low.png",
+                    texturewrap = "clamp",
+                    aniso = 1,
+                    usemipmaps = "false",
+                    shadercolors = {0, 0, 0},
+                    layer = 14
+                }
+            }
+        elseif quality < 3 then
+            SetPuzzleGraphics {
+                usesublayerclone = false,
+                puzzlematchmaterial = {
+                    shader = "Unlit/Transparent",
+                    texture = "/textures/gameplay/tileMatchingBarsinvert_Med.png",
+                    shadercolors = "highway",
+                    aniso = 3,
+                    layer = 14
+                },
+                puzzleflyupmaterial = {
+                    shader = "VertexColorUnlitTintedAddFlyup",
+                    texture = "/textures/gameplay/flyup_Med.png",
+                    shadercolors = "highway",
+                    layer = 14
+                },
+                puzzlematerial = {
+                    shader = "VertexColorUnlitTintedAddDouble",
+                    texture = "/textures/gameplay/tilesSquareinvert_Puzzle_Med.png",
+                    texturewrap = "clamp",
+                    aniso = 3,
+                    usemipmaps = "false",
+                    shadercolors = {0, 0, 0},
+                    layer = 14
+                }
+            }
+        elseif quality < 4 then
+            SetPuzzleGraphics {
+                usesublayerclone = false,
+                puzzlematchmaterial = {
+                    shader = "Unlit/Transparent",
+                    texture = "/textures/gameplay/tileMatchingBarsinvert_High.png",
+                    shadercolors = "highway",
+                    aniso = 6,
+                    layer = 14
+                },
+                puzzleflyupmaterial = {
+                    shader = "VertexColorUnlitTintedAddFlyup",
+                    texture = "/textures/gameplay/flyup_High.png",
+                    shadercolors = "highway",
+                    layer = 14
+                },
+                puzzlematerial = {
+                    shader = "VertexColorUnlitTintedAddDouble",
+                    texture = "/textures/gameplay/tilesSquareinvert_Puzzle_High.png",
+                    texturewrap = "clamp",
+                    aniso = 6,
+                    usemipmaps = "false",
+                    shadercolors = {0, 0, 0},
+                    layer = 14
+                }
+            }
+        else
+            SetPuzzleGraphics {
+                usesublayerclone = false,
+                puzzlematchmaterial = {
+                    shader = "Unlit/Transparent",
+                    texture = "/textures/gameplay/tileMatchingBarsinvert_Ultra.png",
+                    shadercolors = "highway",
+                    aniso = 9,
+                    layer = 14
+                },
+                puzzleflyupmaterial = {
+                    shader = "VertexColorUnlitTintedAddFlyup",
+                    texture = "/textures/gameplay/flyup_Ultra.png",
+                    shadercolors = "highway",
+                    layer = 14
+                },
+                puzzlematerial = {
+                    shader = "VertexColorUnlitTintedAddDouble",
+                    texture = "/textures/gameplay/tilesSquareinvert_Puzzle_Ultra.png",
+                    texturewrap = "clamp",
+                    aniso = 9,
+                    usemipmaps = "false",
+                    shadercolors = {0, 0, 0},
+                    layer = 14
+                }
+            }
+        end
     end
 
     if skinvars.colorcount < 5 then
