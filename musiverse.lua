@@ -248,17 +248,18 @@ do -- Blocks
                     mesh = "/models/blocks/colorblock.obj",
                     shader = "IlluminDiffuse",
                     shadercolors = {
-                        _Color = {0, 0, 0},
-                        texture = "White.png",
-                        height = 0,
-                        float_on_water = false,
-                        scale = {1, 1, 1}
-                    }
+                        _Color = {1,1,1}
+                    },
+                    texture = "/textures/blocks/Grey.jpg",
+                    height = 0,
+                    float_on_water = false,
+                    scale = {1, 1, 1},
+                    layer = 14
                 },
                 ghost = {
                     mesh = "/models/blocks/colorblock.obj",
                     shader = fif(ispuzzle, "Diffuse", "RimLight"),
-                    texture = "Color block.jpg",
+                    texture = "/textures/blocks/Color block.jpg",
                     height = 0,
                     float_on_water = false,
                     scale = {1, 1, 1}
@@ -268,7 +269,7 @@ do -- Blocks
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
-                        texture = "black.png",
+                        texture = "/textures/blocks/White.png",
                         height = 0,
                         float_on_water = false,
                         scale = {1, 1, 1}
@@ -279,7 +280,7 @@ do -- Blocks
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
-                        texture = "black.png",
+                        texture = "/textures/blocks/White.png",
                         height = 0,
                         float_on_water = false,
                         scale = {1, 1, 1}
@@ -290,7 +291,7 @@ do -- Blocks
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
-                        texture = "black.png",
+                        texture = "/textures/blocks/White.png",
                         height = 0,
                         float_on_water = false,
                         scale = {1, 1, 1}
@@ -301,7 +302,7 @@ do -- Blocks
                     shader = "IlluminDiffuse",
                     shadercolors = {
                         _Color = {0, 0, 0},
-                        texture = "black.png",
+                        texture = "/textures/blocks/White.png",
                         height = 0,
                         float_on_water = false,
                         scale = {1, 1, 1}
@@ -317,7 +318,7 @@ do -- Blocks
                 colorblocks = {
                     mesh = "/models/blocks/colorblock.obj",
                     shader = "IlluminDiffuse",
-                    texture = "Grey.jpg",
+                    texture = "/textures/blocks/Grey.jpg",
                     height = 0,
                     float_on_water = false,
                     scale = {1, 1, 1}
